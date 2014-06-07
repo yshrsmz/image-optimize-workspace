@@ -2,6 +2,7 @@
   "name": "image-reduce-workspace",
   "version": "0.0.1",
   "description": "handle reduction of provided images",
+  "repository": "git@ghe.amb.ca.local:shimizu-yasuhiro/image-optimize-workspace.git",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,8 +10,10 @@
   "author": "yshrsmz",
   "license": "ISC",
   "devDependencies": {
+    "async": "^0.9.0",
     "grunt": "^0.4.5",
     "grunt-contrib-coffee": "^0.10.1",
-    "grunt-image": "^0.6.6"
+    "grunt-image": "^0.6.6",
+    "handlebars": "^2.0.0-alpha.4"
   }
 }

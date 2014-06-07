@@ -1,0 +1,10 @@
+(function(p) {
+    var i;
+
+    {{#images}}
+        i = new Image();
+        i.src = 'data:image/{{ext}};base64,{{src}}';
+        p['{{name}}'] = i;
+    {{/images}}
+
+})(window.{{imageNamespace}} = window.{{imageNamespace}} || {});
