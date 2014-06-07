@@ -14,7 +14,6 @@ encodeBase64 = (path) ->
 
 module.exports = (grunt) ->
 
-
     grunt.registerMultiTask "img2js",
         "encode provided images to base64 strings, and convert to LoadQueue compatible js file.",
         ->
@@ -50,6 +49,7 @@ module.exports = (grunt) ->
 
                 ret = template templateData
 
+                # output file
                 fs.writeFile dest, ret, (err) ->
                     if err
                         throw err

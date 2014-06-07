@@ -21,7 +21,9 @@ module.exports = (grunt) ->
                 dest: "dist/dice-map-effect-animation-img.js"
 
 
-    grunt.loadNpmTasks 'grunt-image'
-    grunt.loadNpmTasks 'grunt-contrib-coffee'
+    grunt.loadNpmTasks "grunt-image"
+    grunt.loadNpmTasks "grunt-contrib-coffee"
 
-    grunt.loadTasks 'tasks'
+    grunt.loadTasks "tasks"
+
+    grunt.registerTask "default", ["image", "img2js"]
