@@ -12,3 +12,10 @@ logs
 results
 
 npm-debug.log
+
+*.iml
+node_modules/
+images/**/*.png
+images/**/*.jpg
+dist/**/*.png
+dist/**/*.jpg
