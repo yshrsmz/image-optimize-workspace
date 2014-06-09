@@ -19,3 +19,4 @@ images/**/*.png
 images/**/*.jpg
 dist/**/*.png
 dist/**/*.jpg
+dist/**/*.js
