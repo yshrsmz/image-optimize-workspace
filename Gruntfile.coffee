@@ -12,13 +12,22 @@ module.exports = (grunt) ->
                         src: ['**/*.{png,jpg,gif}']
                         dest: 'dist/'
                     }
+                ],
+            tell:
+                files: [
+                    {
+                        expand: true
+                        cwd: 'images/'
+                        src: ['**/*.{png,jpg,gif}']
+                        dest: 'dist/'
+                    }
                 ]
         img2js:
-            diceMapEffect:
+            dice:
                 options:
-                    imageNamespace: "_g.img.diceMapEffectAnimation"
+                    imageNamespace: "_g.img.dice"
                 src: ["images/diceMapEffectAnimation/*.{png,jpg,gif}"]
-                dest: "dist/dice-map-effect-animation-img.js"
+                dest: "dist/dice.js"
 
 
     grunt.loadNpmTasks "grunt-image"
