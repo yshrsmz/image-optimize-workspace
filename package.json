@@ -13,6 +13,7 @@
     "async": "^0.9.0",
     "grunt": "^0.4.5",
     "grunt-image": "^0.6.6",
-    "handlebars": "^2.0.0-alpha.4"
+    "handlebars": "^2.0.0-alpha.4",
+    "grunt-resource-resizer": "git://github.com/yshrsmz/grunt-resource-resizer.git"
   }
 }

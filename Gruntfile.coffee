@@ -17,7 +17,7 @@ module.exports = (grunt) ->
                 files: [
                     {
                         expand: true
-                        cwd: 'images/'
+                        cwd: 'dist/'
                         src: ['**/*.{png,jpg,gif}']
                         dest: 'dist/'
                     }
@@ -29,10 +29,29 @@ module.exports = (grunt) ->
                 src: ["images/diceMapEffectAnimation/*.{png,jpg,gif}"]
                 dest: "dist/dice.js"
 
+        # grunt-resource-resizer
+        rr:
+            all:
+                options:
+                    sourceRatio: 3
+                    output:
+                        mdpi:
+                            pixelRatio: 1
+                            dir: 'drawable-mdpi/'
+                        xhdpi:
+                            pixelRatio: 2
+                            dir: 'drawable-xhdpi/'
+                        xxhdpi:
+                            pixelRatio: 3
+                            dir: 'drawable-xxhdpi/'
+                files:
+                    './dist/': './images/drawable-xxhdpi/*.png'
+
 
     grunt.loadNpmTasks "grunt-image"
-    grunt.loadNpmTasks "grunt-contrib-coffee"
+    grunt.loadNpmTasks "grunt-resource-resizer"
 
     grunt.loadTasks "tasks"
 
-    grunt.registerTask "default", ["image", "img2js"]
+    # grunt.registerTask "default", ["image", "img2js"]
+    grunt.registerTask "default", ["rr:all", "image:tellme"]
