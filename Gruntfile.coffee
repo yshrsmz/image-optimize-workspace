@@ -13,7 +13,7 @@ module.exports = (grunt) ->
                         dest: 'dist/'
                     }
                 ],
-            tell:
+            app:
                 files: [
                     {
                         expand: true
@@ -54,4 +54,4 @@ module.exports = (grunt) ->
     grunt.loadTasks "tasks"
 
     # grunt.registerTask "default", ["image", "img2js"]
-    grunt.registerTask "default", ["rr:all", "image:tellme"]
+    grunt.registerTask "default", ["rr:all", "image:app"]
